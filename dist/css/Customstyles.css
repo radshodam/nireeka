@@ -1,0 +1,119 @@
+@import url("/css/fonts.css");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* Reset  */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+/* root variable */
+body {
+  color: #000;
+  /* 14px */
+  font-family: "Oswald", sans-serif;
+  font-weight: 300;
+}
+html,
+body,
+p {
+  text-size-adjust: none !important;
+  -webkit-text-size-adjust: none !important;
+  -moz-text-size-adjust: none !important;
+  -ms-text-size-adjust: none !important;
+}
+h1,
+h2,
+h3 {
+  color: #000;
+  font-weight: 700;
+}
+h1 {
+  font-size: 2.5rem;
+}
+h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+}
+@media screen and (min-width: 1024px) {
+  body {
+    font-size: 1.8rem;
+  }
+  h1 {
+    font-size: 5rem;
+  }
+  h2 {
+    font-size: 3.5rem;
+    margin-bottom: 3.5rem;
+  }
+}
+.day {
+  background: #eee;
+  color: black;
+}
+.night {
+  background: #333;
+  color: white;
+}
+/* buttons */
+.btn {
+  cursor: pointer;
+  outline: 0;
+  border: 0;
+  padding: 2rem 2.5rem;
+  border-radius: 8px;
+  margin: 1rem 0;
+  text-align: center;
+  white-space: nowrap;
+  font-size: 1.4rem;
+}
+.btn--primary {
+  background-color: #ff5722;
+  color: #fff;
+}
+.btn--secondary {
+  background-color: #ffa589;
+  color: #fff;
+}
+.btn--block {
+  width: 100%;
+  font-size: 1.6rem;
+}
+@media screen and (min-width: 1024px) {
+  .btn {
+    font-size: 1.6rem;
+  }
+  .btn--block {
+    font-size: 2rem;
+  }
+}
+.boxShadow-Rad {
+  box-shadow: 0px 0px 1px 1px #dfe1e3;
+}
+style show hidden profile .styleProfile {
+  display: none;
+  transition: 0.8s ease-in;
+}
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 478px;
+}
+.hero-section .banner-img {
+  width: 100%;
+  height: auto;
+}
+.hero-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 478px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -31,10 +31,14 @@ module.exports = {
       outline: {
         Outgray: "0px solid #e5e7eb",
       },
+      fontWeight: {
+        radBold: 600,
+   
+      },
     },
   },
   variants: {
     extend: {},
   },
-  plugins: [require("@tailwindcss/custom-forms")],
+  plugins: [require("@tailwindcss/custom-forms"),  require('tailwind-scrollbar')],
 };

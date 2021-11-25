@@ -1,0 +1,31 @@
+<!-- --------------------------------- tab --------------------------------- -->
+<!-- tab -->
+<div class="tabContainer">
+  <!-- header tab -->
+          <div class="buttonContainer">
+              <h onclick="showPanel(0)">tab 1</h>
+              <button onclick="showPanel(1)">tab 2</button>
+              <button onclick="showPanel(2)">tab 1</button>
+          </div>
+          <!-- header tab -->
+          <!-- body tab -->
+          <div class="tabPanel">tab 1:content1</div>
+          <div class="tabPanel">tab 2:content2</div>
+          <div class="tabPanel">tab 3:content3</div>
+</div>
+<!-- body tab -->
+<script type="text/javascript">
+  const tabButtons = document.querySelectorAll(
+    ".tabContainer .buttonContainer"
+  );
+  const tabPanels = document.querySelectorAll(".tabContainer .tabPanel");
+  function showPanel(panelIndex) {
+    tabPanels.forEach((element) => {
+      element.style.display = "none";
+    });
+    tabPanels[panelIndex].style.display = "block";
+  }
+  showPanel(0);
+</script>
+
+<!-- --------------------------------- tab --------------------------------- -->

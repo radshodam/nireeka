@@ -156,17 +156,78 @@ style show hidden profile .styleProfile {
 .g-recaptcha > * {
   float: right;
   right: 0;
-  margin: -2px -2px -10px;/*remove borders*/ 
+  margin: -2px -2px -10px; /*remove borders*/
 }
 
-.g-recaptcha::after{
+.g-recaptcha::after {
   display: block;
   content: "";
   position: absolute;
-  left:0;
-  right:150px;
+  left: 0;
+  right: 150px;
   top: 0;
-  bottom:0;
+  bottom: 0;
   background-color: #f9f9f9;
   clear: both;
+}
+.banner {
+  /* Location of the image */
+  background-image: url(/dist/images/full-fs-image.png);
+
+  /* Image is centered vertically and horizontally at all times */
+  background-position: center center;
+
+  /* Image doesn't repeat */
+  background-repeat: no-repeat;
+
+  /* Makes the image fixed in the viewport so that it doesn't move when 
+     the content height is greater than the image height */
+  // background-attachment: fixed;
+
+  /* This is what makes the background image rescale based on its container's size */
+  background-size: cover;
+
+  /* Pick a solid background color that will be displayed while the background image is loading */
+  background-color: #464646;
+  object-fit: cover;
+  height: 100vh;
+
+  @media only screen and (max-width: 820px) {
+    /* The file size of this background image is 93% smaller
+       * to improve page load speed on mobile internet connections */
+    background-image: url(/dist/images/full-fs-image-tablet.jpg);
+  }
+}
+
+/* For mobile devices */
+
+//border beetween
+.borderTwo {
+  border-right: 2px solid gainsboro;
+  border-left: 2px solid gainsboro;
+  // @media only screen and (max-width: 820px) {
+  //   border: none;
+  // }
+}
+
+@media only screen and (max-width: 763px) {
+  .glass {
+    background: rgba(104, 103, 103, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+  }
+}
+
+.imgMin-h {
+  object-fit: cover;
+  height: 100%;
+}
+.imgMin-w{
+  min-width: 200px;
+}
+
+.height-1-6{
+  height: 1.6rem;
 }

@@ -9,7 +9,7 @@
     font-family: "Oswald";
     font-weight: 300;
     font-style: normal;
-    src: url("/dist/fonts/Oswald-VariableFont_wght.ttf") format("woff");
+    src: url("/dist/fonts/static/Oswald-Light.ttf") format("woff");
   }
   
   body,

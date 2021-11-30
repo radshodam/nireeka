@@ -16,6 +16,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
     integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Swiper's CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 </head>
 
 <body>
@@ -41,12 +43,12 @@
 
   <header>
     <!-- nav -->
-    <div class="absolute z-10 w-full text-white bg-black dark-mode:text-gray-200 dark-mode:bg-gray-800">
+    <div class="absolute z-10 w-full px-5 text-white bg-black py-7 dark-mode:text-gray-200 dark-mode:bg-gray-800">
       <div x-data="{ open: false }"
-        class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-4">
+        class="flex flex-col px-4 mx-auto max-w-screen-2xl md:items-center md:justify-between md:flex-row md:px-6 lg:px-6">
         <div class="flex flex-row items-center justify-between p-4">
           <a href="#">
-            <img src="/dist/images/logo_nireeka_white.svg" alt="logo_Nireeka" class="w-36" />
+            <img src="/dist/images/logo_nireeka_white.svg" alt="logo_Nireeka" class="w-44" />
           </a>
           <button class="rounded-lg md:hidden focus:outline-none focus:shadow-outline" @click="open = !open">
             <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
@@ -64,7 +66,7 @@
           <div @click.away="open = false" class="relative" x-data="{ open: false }">
             <button @click="open = !open"
               class="flex flex-row items-center w-full px-4 py-2 mt-2 text-sm font-semibold text-left bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:focus:bg-gray-600 dark-mode:hover:bg-gray-600 md:w-auto md:inline md:mt-0 md:ml-4 focus:outline-none focus:text-gray-20 focus:shadow-outline">
-              <span>products</span>
+              <span>Products</span>
               <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}"
                 class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1">
                 <path fill-rule="evenodd"
@@ -81,11 +83,10 @@
               class="absolute right-0 w-full mt-2 origin-top-right rounded-md shadow-lg md:w-48">
               <div class="px-2 py-2 text-center bg-black rounded-md shadow dark-mode:bg-gray-800">
                 <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 focus:text-gray-20 focus:outline-none focus:shadow-outline"
-                  href="#">Link #1</a>
+                  href="#">ACCESSORIES</a>
                 <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 focus:text-gray-20 focus:outline-none focus:shadow-outline"
-                  href="#">Link #2</a>
-                <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 focus:text-gray-20 focus:outline-none focus:shadow-outline"
-                  href="#">Link #3</a>
+                  href="#">SPARE PARTS</a>
+               
               </div>
             </div>
           </div>
@@ -95,7 +96,7 @@
           <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 focus:text-gray-20 focus:outline-none focus:shadow-outline"
             href="#">support</a>
           <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 focus:text-gray-20 focus:outline-none focus:shadow-outline"
-            href="#">sign in</a>
+            href="#">sign <span class="lowercase">in</span></a>
           <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 focus:text-gray-20 focus:outline-none focus:shadow-outline"
             href="#">register</a>
         </nav>
@@ -111,8 +112,8 @@
           <div class="w-full px-1 pt-6 text-center lg:mt-12 md:w-3/12 sm:w-96 xs:96">
             <div class="relative flex flex-col w-full min-w-0 mb-8 break-words bg-transparent glass text-gray-50">
               <div class="flex-auto px-4 py-5 imgMin-w">
-                <h6 class="text-xl font-semibold">28 MPH (45KPH)</h6>
-                <p class="mt-2 mb-4 text-blueGray-500">MAX SPEED</p>
+                <h6 class="text-xl font-semibold">28 MPH (45 KPH)</h6>
+                <p class="mt-2 mb-4 text-gray-300">MAX SPEED</p>
               </div>
             </div>
           </div>
@@ -121,15 +122,15 @@
               class="relative flex flex-col w-full min-w-0 mb-8 break-words bg-transparent glass text-gray-50 borderTwo">
               <div class="flex-auto px-4 py-5 imgMin-w">
                 <h6 class="text-xl font-semibold">75 MILES (120 KM)</h6>
-                <p class="mt-2 mb-4 text-blueGray-500">MAX RANGE</p>
+                <p class="mt-2 mb-4 text-gray-300">MAX RANGE</p>
               </div>
             </div>
           </div>
           <div class="w-full px-1 pt-6 text-center lg:mt-12 md:w-3/12 sm:w-96 xs:96 py-auto">
             <div class="relative flex flex-col w-full min-w-0 mb-8 break-words bg-transparent glass text-gray-50">
               <div class="flex-auto px-4 py-5 imgMin-w">
-                <h6 class="text-xl font-semibold">250 to 500 w/120 NM</h6>
-                <p class="mt-2 mb-4 text-blueGray-500">MAX POWER/TORQUE</p>
+                <h6 class="text-xl font-semibold">250 <span class="lowercase">to</span> 500 w/120 NM</h6>
+                <p class="mt-2 mb-4 text-gray-300">MAX POWER/TORQUE</p>
               </div>
             </div>
           </div>
@@ -139,40 +140,43 @@
   </section>
   <!-- cover -->
   <section class="mt-20">
-    <div class="flex justify-center w-full mx-auto mb-8 text-4xl text-center text-gray-700 ">
+    <div class="flex justify-center w-full mx-auto mb-8 text-4xl text-center nirekaGray ">
       <h3 class="py-2 text-center align-middle w-96">
         nireeka products
-        <span class="flex pt-6 mx-auto border-b-4 border-gray-600 border-double w-36"></span>
+        <span class="flex pt-6 mx-auto border-b-4 border-gray-300 border-double w-36"></span>
       </h3>
     </div>
     <div class="flex justify-center w-full">
-      <h4 class="w-1/2 text-center lowercase">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-        tenetur eos a reiciendis quasi, velit in voluptatibus ut hic doloribus
-        nihil officiis dicta voluptas quidem vel quaerat, beatae ipsam!
-        Fugiat. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Libero illum ad est? Facilis sit esse sapiente repellendus sunt
-        obcaecati, necessitatibus nam animi optio facere exercitationem
-        aliquid delectus impedit voluptas ipsum!
+      <h4 class="w-2/6 text-base text-center text-gray-700 normal-case">
+        Stylish, Carbon Fiber, and affordable. These are the best three words to describe the Nireeka products. Just
+        click on the models below to make your bespoke bike and make it absolutely one of a kind.
+
       </h4>
     </div>
 
     <div class="tabContainer">
       <div class="buttonContainer">
-        <div class="flex flex-wrap justify-center px-24 pt-10 mt-16">
-          <div class="w-full p-5 mb-4 text-2xl text-center sm:w-3/3 md:w-3/3 lg:w-1/3 xl:w-1/3 buttonContainer"
+        <div class="flex flex-wrap justify-center w-4/5 px-1 pt-10 mx-auto mt-4 lp:px-24">
+          <div
+            class="w-full p-5 mb-4 text-2xl text-center cursor-pointer sm:w-3/3 md:w-3/3 lp:1/3 lg:w-1/3 xl:w-1/3 min-w-nireeka "
             onclick="showPanel(0)">
             <img src="/dist/images/homie.jpg" alt="homie" class="h-auto max-w-full align-middle border-none" />
-            <h6 class="p-2">from $1,499</h6>
+            <h6 class="text-xl text-gray-800">NIREEKA HOMIE</h6>
+            <h6 class="p-1 text-lg text-gray-700">from $1,999</h6>
           </div>
-          <div class="w-full p-5 mb-4 text-2xl text-center sm:w-3/3 md:w-3/3 lg:w-1/3 xl:w-1/3" onclick="showPanel(1)">
+          <div
+            class="w-full p-5 mb-4 text-2xl text-center cursor-pointer sm:w-3/3 md:w-3/3 lp:1/3 lg:w-1/3 xl:w-1/3 min-w-nireeka"
+            onclick="showPanel(1)">
             <img src="/dist/images/prime.jpg" alt="prime" class="h-auto max-w-full align-middle border-none" />
-            <h6 class="p-2">from $2,499</h6>
+            <h6 class="text-xl text-gray-800">NIREEKA PRIME</h6>
+            <h6 class="p-1 text-lg text-gray-700">from $2,499</h6>
           </div>
-          <div class="w-full p-5 mb-4 text-2xl text-center sm:w-3/3 md:w-3/3 lg:w-1/3 xl:w-1/3">
-            <img src="/dist/images/nyx.jpg" alt="nyx." class="h-auto max-w-full align-middle border-none"
-              onclick="showPanel(2)" />
-            <h6 class="p-2">from $3,499</h6>
+          <div
+            class="w-full p-5 mb-4 text-2xl text-center cursor-pointer sm:w-3/3 md:w-3/3 lp:1/3 lg:w-1/3 xl:w-1/3 min-w-nireeka"
+            onclick="showPanel(2)">
+            <img src="/dist/images/nyx.jpg" alt="nyx." class="h-auto max-w-full align-middle border-none" />
+            <h6 class="text-xl text-gray-800">NIREEKA NYX </h6>
+            <h6 class="p-1 text-lg text-gray-700">from $3,499</h6>
           </div>
         </div>
       </div>
@@ -182,47 +186,37 @@
 
   <!-- tabPanel1 -->
   <section class="tabPanel">
-    <div class="flex-wrap justify-center hidden md:flex">
+    <div class="flex-wrap justify-center hidden md:hidden lp:flex">
       <div class="w-full text-2xl text-center bg-gray-100 sm:w-3/3 md:w-3/3 lg:w-3/5 xl:w-3/5">
         <div>
-          <h4 class="py-4 mt-16 text-3xl">MOUNTAIN E-BIKES</h4>
-          <p class="text-2xl lowercase">
-            if you need an entry level mountain and commuter bike at the same
-            time
+          <h4 class="py-1 mt-8 text-3xl">MOUNTAIN E-BIKES</h4>
+          <p class="text-2xl leading-7 text-gray-700 lowercase">
+            <span class="normal-case">If you need an entry mountain and commuter bike at the same time.
           </p>
         </div>
-        <div class="flex flex-wrap justify-between px-4 pt-16 pb-8">
+        <div class="flex flex-wrap justify-start px-4 pt-8 pb-8">
           <div class="flex flex-col px-4 md:w-1/2 sm:w-2/2">
             <div>
-              <img src="/dist/images/award-winner-design.png" alt="" />
+              <img src="/dist/images/award-winner-design.png" alt="" class="w-5/6 mx-auto" />
             </div>
             <div class="text-xl">
               <span class="text-red-500 font-radBold"> > </span>
               <span>homie - $1,999</span>
             </div>
             <div class="py-2 text-base text-gray-800">
-              <h6>mountain commuter e-bike</h6>
+              <h6>mountain commuter <span class="lowercase">e</span> -bike</h6>
             </div>
             <div class="py-2 text-lg text-gray-800">
-              <button class="w-32 bg-transparent border-2 border-red-300 rounded-md">
+              <button class="w-32 text-red-500 bg-transparent border-2 border-red-500 rounded-md">
                 BUY NOW
               </button>
             </div>
           </div>
-          <div class="h-48 px-5 overflow-auto md:w-1/2 sm:w-2/2 lp:h-64" id="journal-scroll">
-            <h6 class="text-base lowercase">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
-              laboriosam voluptatibus quas mollitia vitae maiores, minima,
-              nihil illum expedita ab quos dolorem ratione molestias. Id porro
-              alias eius error unde! Lorem, ipsum dolor sit amet consectetur
-              adipisicing elit. Possimus tenetur ad nemo vero, veniam odio
-              sequi odit cupiditate rem delectus corporis maiores impedit
-              aperiam assumenda animi vitae debitis labore repellendus. Lorem
-              ipsum dolor sit amet consectetur adipisicing elit. Qui ipsa
-              labore, minus maxime iusto ut ipsam nulla facilis quam hic
-              deleniti autem, fugit neque aliquid doloremque numquam nobis
-              nisi incidunt.
-            </h6>
+          <div class="h-48 px-1 overflow-auto md:w-4/12 sm:w-2/2 lp:h-64" id="journal-scroll">
+            <h6 class="text-base text-left text-gray-500 lowercase">
+              The Nireeka Homie is an affordably priced full suspension eMTB with an eye-catching custom frame design,
+              carbon fiber frame and components keep weight remarkably low for an ebike, available in three sizes to fit
+              a wide range of riders, available online-only with shipping to most countries around the globe.
           </div>
         </div>
       </div>
@@ -234,45 +228,38 @@
   <!-- tabPanel2 -->
   <section class="tabPanel">
     <div class="flex-wrap justify-center hidden md:flex">
-      <div class="w-full text-2xl text-center bg-red-500 sm:w-3/3 md:w-3/3 lg:w-3/5 xl:w-3/5">
+      <div class="w-full text-2xl text-center bg-gray-200 sm:w-3/3 md:w-3/3 lg:w-3/5 xl:w-3/5">
         <div>
-          <h4 class="py-4 mt-16 text-3xl">MOUNTAIN E-BIKES</h4>
-          <p class="text-2xl lowercase">
-            if you need an entry level mountain and commuter bike at the same
-            time
+          <h4 class="py-1 mt-8 text-3xl normal-case">Fat E-Bikes</h4>
+          <p class="text-2xl leading-7 text-gray-700 lowercase">
+            <span class="normal-case">Most powerful, fastest and unique
           </p>
         </div>
-        <div class="flex flex-wrap justify-between px-4 pt-16 pb-8">
+        <div class="flex flex-wrap justify-start px-4 pt-8 pb-8">
           <div class="flex flex-col px-4 md:w-1/2 sm:w-2/2">
             <div>
-              <img src="/dist/images/award-winner-design.png" alt="" />
+              <img src="/dist/images/award-winner-design.png" alt="" class="w-5/6 mx-auto" />
             </div>
             <div class="text-xl">
               <span class="text-red-500 font-radBold"> > </span>
               <span>homie - $1,999</span>
             </div>
             <div class="py-2 text-base text-gray-800">
-              <h6>mountain commuter e-bike</h6>
+              <h6>mountain commuter <span class="lowercase">e</span> -bike</h6>
             </div>
             <div class="py-2 text-lg text-gray-800">
-              <button class="w-32 bg-transparent border-2 border-red-300 rounded-md">
+              <button class="w-32 text-red-500 bg-transparent border-2 border-red-500 rounded-md">
                 BUY NOW
               </button>
             </div>
           </div>
-          <div class="h-48 px-5 overflow-auto md:w-1/2 sm:w-2/2 lp:h-64" id="journal-scroll">
-            <h6 class="text-base lowercase">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
-              laboriosam voluptatibus quas mollitia vitae maiores, minima,
-              nihil illum expedita ab quos dolorem ratione molestias. Id porro
-              alias eius error unde! Lorem, ipsum dolor sit amet consectetur
-              adipisicing elit. Possimus tenetur ad nemo vero, veniam odio
-              sequi odit cupiditate rem delectus corporis maiores impedit
-              aperiam assumenda animi vitae debitis labore repellendus. Lorem
-              ipsum dolor sit amet consectetur adipisicing elit. Qui ipsa
-              labore, minus maxime iusto ut ipsam nulla facilis quam hic
-              deleniti autem, fugit neque aliquid doloremque numquam nobis
-              nisi incidunt.
+          <div class="h-48 px-1 overflow-auto md:w-4/12 sm:w-2/2 lp:h-64" id="journal-scroll">
+            <h6 class="text-base text-left text-gray-500 lowercase">This carbon fiber, high-powered on two wheels and a
+              tank on the trails. Surprisingly, the bike is very customizable, giving you your option of components,
+              electronics, and even color.
+              Riding off-road, the bike feels like a tank, in a very good way. The <span class="text-gray-800">1000w</span> motor really made it easy to
+              bound up hills and sort of ignore almost any incline.
+
             </h6>
           </div>
         </div>
@@ -285,46 +272,38 @@
 
   <!-- tabPanel3 -->
   <section class="tabPanel">
-    <div class="flex-wrap justify-center hidden md:flex">
+    <div class="flex-wrap justify-center hidden lg:flex">
       <div class="w-full text-2xl text-center bg-gray-200 sm:w-3/3 md:w-3/3 lg:w-3/5 xl:w-3/5">
         <div>
-          <h4 class="py-4 mt-16 text-3xl">MOUNTAIN E-BIKES</h4>
-          <p class="text-2xl lowercase">
-            if you need an entry level mountain and commuter bike at the same
-            time
+          <h4 class="py-1 mt-8 text-3xl normal-case">Trail E-Bike</h4>
+          <p class="text-2xl leading-7 text-gray-700 lowercase">
+            Award-winner pro trail E-Bike, in case you want a bike that doesn't let you down whatsoever!
           </p>
         </div>
-        <div class="flex flex-wrap justify-between px-4 pt-16 pb-8">
+        <div class="flex flex-wrap justify-start px-4 pt-8 pb-8">
           <div class="flex flex-col px-4 md:w-1/2 sm:w-2/2">
             <div>
-              <img src="/dist/images/award-winner-design.png" alt="" />
+              <img src="/dist/images/award-winner-design.png" alt="" class="w-5/6 mx-auto" />
             </div>
             <div class="text-xl">
               <span class="text-red-500 font-radBold"> > </span>
               <span>homie - $1,999</span>
             </div>
             <div class="py-2 text-base text-gray-800">
-              <h6>mountain commuter e-bike</h6>
+              <h6>mountain commuter <span class="lowercase">e</span> -bike</h6>
             </div>
             <div class="py-2 text-lg text-gray-800">
-              <button class="w-32 bg-transparent border-2 border-red-300 rounded-md">
+              <button class="w-32 text-red-500 bg-transparent border-2 border-red-500 rounded-md">
                 BUY NOW
               </button>
             </div>
           </div>
-          <div class="h-48 px-5 overflow-auto md:w-1/2 sm:w-2/2 lp:h-64" id="journal-scroll">
-            <h6 class="text-base lowercase">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
-              laboriosam voluptatibus quas mollitia vitae maiores, minima,
-              nihil illum expedita ab quos dolorem ratione molestias. Id porro
-              alias eius error unde! Lorem, ipsum dolor sit amet consectetur
-              adipisicing elit. Possimus tenetur ad nemo vero, veniam odio
-              sequi odit cupiditate rem delectus corporis maiores impedit
-              aperiam assumenda animi vitae debitis labore repellendus. Lorem
-              ipsum dolor sit amet consectetur adipisicing elit. Qui ipsa
-              labore, minus maxime iusto ut ipsam nulla facilis quam hic
-              deleniti autem, fugit neque aliquid doloremque numquam nobis
-              nisi incidunt.
+          <div class="h-48 px-1 overflow-auto md:w-4/12 sm:w-2/2 lp:h-64" id="journal-scroll">
+            <h6 class="text-base text-left text-gray-500 lowercase">Nireeka has upped the ante most ambitious ebikes to
+              date. The Sierra and Nyx are a pair of lightweight, competitively priced, full-suspension off-roaders
+              featuring high-quality components and Nireeka l s gorgeous custom carbon frames.
+              MOTOR BATTERY RANGE
+
             </h6>
           </div>
         </div>
@@ -336,24 +315,24 @@
   </section>
   <section class="mt-10">
     <div>
-      <h6 class="py-6 mx-auto text-lg text-center text-gray-700">
+      <h6 class="py-6 mx-auto text-lg text-center text-gray-500 uppercase">
         nireeka as reviwed by the press
       </h6>
     </div>
     <div>
-      <div class="w-8/12 mx-auto bg-gray-100">
-        <div class="flex flex-wrap justify-between p-6">
+      <div class="w-full mx-auto bg-gray-100 lp:w-8/12">
+        <div class="flex justify-between p-4 lp:p-6 lp:col-span-2">
           <div class="flex self-center">
-            <img src="/dist/images/electrek-logo.png" alt="" class="w-24 height-1-6" />
+            <img src="/dist/images/electrek-logo.png" alt="" class="px-2 w-36" />
           </div>
           <div class="flex self-center">
-            <img src="/dist/images/new-atlas-logo.png" alt="" class="w-24 height-1-6" />
+            <img src="/dist/images/new-atlas-logo.png" alt="" class="px-2 w-36" />
           </div>
           <div class="flex self-center">
-            <img src="/dist/images/ebr-logo.png" alt="" class="w-24" />
+            <img src="/dist/images/ebr-logo.png" alt="w-36 px-2" />
           </div>
           <div class="flex self-center">
-            <img src="/dist/images/ev-nords-logo.png" alt="" class="w-24 height-1-6" />
+            <img src="/dist/images/ev-nords-logo.png" alt="" class="px-2 w-36" />
           </div>
         </div>
       </div>
@@ -361,142 +340,374 @@
   </section>
   <!-- end body tab -->
   <!--end tab -->
+  <!-- start centerSide -->
+
+  <!-- start centerSide -->
+  <div class="mt-20 swiper mySwiper">
+    <div class="swiper-wrapper">
+      <!-- slider1 -->
+      <div class="swiper-slide">
+        <section class="py-12 overflow-hidden bg-gray-50 md:py-20 lg:py-24">
+          <div class="relative px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+            <div
+              class="absolute transform top-full right-full translate-x-1/3 -translate-y-1/4 lg:translate-x-1/2 xl:-translate-y-1/2"
+              width="404" height="404" fill="none" viewBox="0 0 404 404" role="img" aria-labelledby="svg-workcation">
+              <title id="svg-workcation">Workcation</title>
+              <defs>
+                <pattern id="ad119f34-7694-4c31-947f-5c9d249b21f3" x="0" y="0" width="20" height="20"
+                  patternUnits="userSpaceOnUse">
+                  <rect x="0" y="0" width="4" height="4" class="text-gray-200" fill="currentColor" />
+                </pattern>
+              </defs>
+              <rect width="404" height="404" fill="url(#ad119f34-7694-4c31-947f-5c9d249b21f3)" />
+            </div>
+
+            <div class="relative">
+              <img class="h-8 mx-auto"
+                src="/dist/images/electrek-logo.png"
+                alt="Workcation">
+              <blockquote class="mt-10">
+                <div class="max-w-3xl mx-auto text-2xl font-medium leading-9 text-center text-gray-900">
+                  <h5 class="pb-5">Nireeka Prime Review: High-powered parade on two wheels</h5>
+                  <p class="text-lg">
+                    Nireeka made a big splash on the E-bike scene with the launch of the Nireeka Prime. This carbon fiber, high-powered head-turner is a parade on two wheels and a tank on the trails. Surprisingly, the bike is very customizable, giving you your option of components, electronics, and even color.
+                  </p>
+                </div>
+                <footer class="mt-8">
+                  <div class="md:flex md:items-center md:justify-center">
+                    <div class="md:flex-shrink-0">
+                      <img class="w-10 h-10 mx-auto rounded-full"
+                        src="/dist/images/redNireeka.svg" class="rounded-full"
+                        alt="">
+                    </div>
+                    <div class="mt-3 text-center md:mt-0 md:ml-4 md:flex md:items-center">
+                      <div class="text-base font-medium text-gray-900">electrek</div>
+
+                      <svg class="hidden w-5 h-5 mx-1 text-indigo-600 md:block" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M11 0h3L9 20H6l5-20z" />
+                      </svg>
+
+                      <div class="text-base font-medium text-gray-500 cursor-pointer"><a href="www.electrek.co">electrek.co</a> </div>
+                    </div>
+                  </div>
+                </footer>
+              </blockquote>
+            </div>
+          </div>
+        </section>
+      </div>
+      <!-- slider2 -->
+      <div class="swiper-slide">
+        <section class="py-12 overflow-hidden bg-gray-50 md:py-20 lg:py-24">
+          <div class="relative px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+            <svg
+              class="absolute transform top-full right-full translate-x-1/3 -translate-y-1/4 lg:translate-x-1/2 xl:-translate-y-1/2"
+              width="404" height="404" fill="none" viewBox="0 0 404 404" role="img" aria-labelledby="svg-workcation">
+              <title id="svg-workcation">Workcation</title>
+              <defs>
+                <pattern id="ad119f34-7694-4c31-947f-5c9d249b21f3" x="0" y="0" width="20" height="20"
+                  patternUnits="userSpaceOnUse">
+                  <rect x="0" y="0" width="4" height="4" class="text-gray-200" fill="currentColor" />
+                </pattern>
+              </defs>
+              <rect width="404" height="404" fill="url(#ad119f34-7694-4c31-947f-5c9d249b21f3)" />
+            </svg>
+
+            <div class="relative">
+              <img class="h-6 mx-auto"
+                src="/dist/images/new-atlas-logo.png"
+                alt="Workcation">
+              <blockquote class="mt-10">
+                <div class="max-w-3xl mx-auto text-2xl font-medium leading-9 text-center text-gray-900">
+                  <h5 class="pb-5">Nireeka's powerful, carbon-framed Prime e-fatbike is a beauty</h5>
+
+                  <p class="text-lg">
+                    There's really nobody in the ebike world I can think of that makes bikes like Nireeka. These guys aren't interested in stealth, or retro, or making bikes that look like anyone else's. They work exclusively with their own carbon-fiber frames, which feature strangely flowing sci-fi designs with twisting edges and curves and angles in a style of their very own.
+                  </p>
+                </div>
+                <footer class="mt-8">
+                  <div class="md:flex md:items-center md:justify-center">
+                    <div class="md:flex-shrink-0">
+                      <img class="w-10 h-10 mx-auto rounded-full"
+                        src="/dist/images/redNireeka.svg" class="rounded-full"
+                        alt="">
+                    </div>
+                    <div class="mt-3 text-center md:mt-0 md:ml-4 md:flex md:items-center">
+                      <div class="text-base font-medium text-gray-900">newatlas</div>
+
+                      <svg class="hidden w-5 h-5 mx-1 text-indigo-600 md:block" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M11 0h3L9 20H6l5-20z" />
+                      </svg>
+
+                      <div class="text-base font-medium text-gray-500 cursor-pointer"><a href=" newatlas.com"> newatlas.com</a></div>
+                    </div>
+                  </div>
+                </footer>
+              </blockquote>
+            </div>
+          </div>
+        </section>
+      </div>
+      <!-- slider3 -->
+      <div class="swiper-slide">
+        <section class="py-12 overflow-hidden bg-gray-50 md:py-20 lg:py-24">
+          <div class="relative px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+            <svg
+              class="absolute transform top-full right-full translate-x-1/3 -translate-y-1/4 lg:translate-x-1/2 xl:-translate-y-1/2"
+              width="404" height="404" fill="none" viewBox="0 0 404 404" role="img" aria-labelledby="svg-workcation">
+              <title id="svg-workcation">Workcation</title>
+              <defs>
+                <pattern id="ad119f34-7694-4c31-947f-5c9d249b21f3" x="0" y="0" width="20" height="20"
+                  patternUnits="userSpaceOnUse">
+                  <rect x="0" y="0" width="4" height="4" class="text-gray-200" fill="currentColor" />
+                </pattern>
+              </defs>
+              <rect width="404" height="404" fill="url(#ad119f34-7694-4c31-947f-5c9d249b21f3)" />
+            </svg>
+
+            <div class="relative">
+              <img class="h-8 mx-auto"
+                src="/dist/images/ebr-logo.png"
+                alt="Workcation">
+              <blockquote class="mt-10">
+                <div class="max-w-3xl mx-auto text-2xl font-medium leading-9 text-center text-gray-900">
+                  <h5 class="py-2">Nireeka Prime 1.5kW high-power 37mph e-bike enters the ring</h5>
+                  <p class="text-lg"> 
+                    The bike’s carbon monocoque frame is certainly a unique head-turner. And while it doesn’t offer suspension, it at least rides on 4-inch fat tires that should add some comfort back in to the ride. The Prime’s mid-drive motor is capable of propelling the bike up to 37.5mph (60 km/h), according to the company
+                  </p>
+                </div>
+                <footer class="mt-8">
+                  <div class="md:flex md:items-center md:justify-center">
+                    <div class="md:flex-shrink-0">
+                      <img class="w-10 h-10 mx-auto rounded-full"
+                      src="/dist/images/redNireeka.svg" class="rounded-full"
+                      alt="">
+                    </div>
+                    <div class="mt-3 text-center md:mt-0 md:ml-4 md:flex md:items-center">
+                      <div class="text-base font-medium text-gray-900">electricbikereview</div>
+
+                      <svg class="hidden w-5 h-5 mx-1 text-indigo-600 md:block" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M11 0h3L9 20H6l5-20z" />
+                      </svg>
+
+                      <div class="text-base font-medium text-gray-500 cursor-pointer"><a href="electricbikereview.com"> electricbikereview.com </a></div>
+                    </div>
+                  </div>
+                </footer>
+              </blockquote>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="swiper-slide">
+        <section class="py-12 overflow-hidden bg-gray-50 md:py-20 lg:py-24">
+          <div class="relative px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+            <svg
+              class="absolute transform top-full right-full translate-x-1/3 -translate-y-1/4 lg:translate-x-1/2 xl:-translate-y-1/2"
+              width="404" height="404" fill="none" viewBox="0 0 404 404" role="img" aria-labelledby="svg-workcation">
+              <title id="svg-workcation">Workcation</title>
+              <defs>
+                <pattern id="ad119f34-7694-4c31-947f-5c9d249b21f3" x="0" y="0" width="20" height="20"
+                  patternUnits="userSpaceOnUse">
+                  <rect x="0" y="0" width="4" height="4" class="text-gray-200" fill="currentColor" />
+                </pattern>
+              </defs>
+              <rect width="404" height="404" fill="url(#ad119f34-7694-4c31-947f-5c9d249b21f3)" />
+            </svg>
+
+            <div class="relative">
+              <img class="h-8 mx-auto"
+                src="/dist/images/ev-nords-logo.png">
+              <blockquote class="mt-10">
+                <div class="max-w-3xl mx-auto text-2xl font-medium leading-9 text-center text-gray-900">
+                  <h5 class="py-2">Nireeka is back with hardtail e-bike: PRIME!</h5>
+                  <p class="text-lg">
+                New NIREEKA PRIME hardtail electric bike is not taking any suggestions from current e-bike design trends! Nireeka is one of a kind fluid shaped electric creation with mid-motor power levels that will satisfy Europeans with 250-watt regulation model and e-bikers from the USA with 1000 watts motor model.
+                  </p>
+                </div>
+                <footer class="mt-8">
+                  <div class="md:flex md:items-center md:justify-center">
+                    <div class="md:flex-shrink-0">
+                      <img class="w-10 h-10 mx-auto rounded-full"
+                      src="/dist/images/redNireeka.svg" class="rounded-full"
+                      alt="">
+                    </div>
+                    <div class="mt-3 text-center md:mt-0 md:ml-4 md:flex md:items-center">
+                      <div class="text-base font-medium text-gray-900">evnerds</div>
+
+                      <svg class="hidden w-5 h-5 mx-1 text-indigo-600 md:block" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M11 0h3L9 20H6l5-20z" />
+                      </svg>
+
+                      <div class="text-base font-medium text-gray-500 cursor-pointer"><a href="evnerds.com"> evnerds.com </a></div>
+                    </div>
+                  </div>
+                </footer>
+              </blockquote>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+  </div>>
   <!-- ------------------------------- footer -------------------------------- -->
-  <footer class="mt-24 bg-black" aria-labelledby="footerHeading">
+  <!-- subscribe -->
+  <div
+    class="p-1 mt-16 custom-Red sm:flex sm:justify-center xs:flex xs:justify-center x320:flex x320:justify-center sm:pb-4 xs:pb-4 x320:pb-4">
+    <div class="w-11/12 text-center md:flex md:items-center md:justify-evenly xl:mt-0 md:text-center">
+      <div>
+        <h3 class="text-3xl font-semibold text-center text-gray-200 capitalize lg:text-left ">
+          join <span class="lowercase">the</span> nireeka adventure
+        </h3>
+        <p class="mt-2 text-3xl text-gray-200 lowercase">
+
+          <span class="capitalize">Subscribe</span> for news, event and more.
+        </p>
+      </div>
+      <div>
+        <form class="mt-4 md:flex lg:mt-0 md:m-auto md:max-w-xs sm:mx-auto ">
+          <label for="email-address" class="sr-only">Email address</label>
+          <input type="email" name="email-address" id="email-address" autocomplete="email" required=""
+            class="w-full h-10 px-4 mt-3 text-sm text-gray-900 placeholder-gray-400 transition-all bg-white border border-gray-200 rounded-md shadow-sm appearance-none focus:outline-none Min-w focus:ring-2 focus:ring-offset-gray-800 md:max-w-xs md:mt-2 md:ml-3 md:flex-shrink-0 "
+            placeholder="Your E-Mail Address">
+          <div class="mt-3 border border-gray-200 rounded-md shadow-sm md:mt-2 md:ml-3 md:flex-shrink-0">
+            <button type="submit"
+              class="flex items-center justify-center w-full h-10 px-2 py-2 text-sm font-medium text-white bg-transparent border border-transparent rounded-md shadow-sm hover:border-gray-600 focus:outline-none">
+              SUBMIT
+            </button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- subscribe -->
+  <footer class="bg-black " aria-labelledby="footerHeading">
     <div class="container mx-auto">
       <div class="flex flex-wrap-reverse mx-auto">
-        <div class="flex justify-end w-1/2 imgMin-w">
-          <img src="/dist/images/voice.png" alt="" class="w-9/12">
+        <div class="justify-end hidden w-1/2 md:flex imgMin-w">
+          <img src="/dist/images/contact.png" alt="" class="w-8/12">
         </div>
-        <div class="items-center w-1/2 px-4 m-auto text-white ">
-          <h3 class="py-2 text-4xl text-center align-middle">
+        <div class="items-center w-1/2 px-4 m-auto text-gray-200 ">
+          <h3 class="p-5 text-2xl leading-4 text-center align-middle ">
             Customer support
             <span class="flex pt-6 mx-auto border-b-2 border-red-600 border-double w-36"></span>
           </h3>
-          <p class="px-12 pt-5 text-center ">Lorem ipsum dolor sit minus impedit quod amet sed pariatur alias
-            optio!</p>
-          <div class="pt-10 mx-auto text-center ">>Find Out More</div>
+          <p class="pt-5 text-base text-center text-gray-400 normal-case ">Get 24/7 After-sales services from the
+            Nireeka authorised team.</p>
+          <div class="pt-10 mx-auto text-base text-center text-gray-400 uppercase cursor-pointer "><a href="nireeka.com/support">> Find Out More </a> </div>
 
         </div>
       </div>
-      <div class="relative px-4 py-6 mx-auto max-w-7xl sm:px-6 lg:py-8 lg:px-8">
+      <div class="relative w-9/12 px-4 py-6 mx-auto max-w-7xl sm:px-6 lg:py-8 lg:px-6">
         <div class="absolute inset-0 flex items-center" aria-hidden="true">
-          <div class="w-full border-t border-gray-800"></div>
+          <div class="w-full border border-t border-gray-800"></div>
         </div>
         <div class="relative flex justify-center">
-          <span class="mx-2 text-gray-500 bg-white">
-            <img src="https://i.ibb.co/wgrP3yD/icon-white.jpg" alt="" width="100">
+          <span class="mx-2 bg-black px-14 ">
+            <img src="/dist/images/iconNireeka-rect.svg" alt="" width="60" class="rounded-full">
           </span>
         </div>
       </div>
       <h2 id="footerHeading" class="sr-only">Footer</h2>
-      <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+      <div class="w-9/12 px-4 mx-auto max-w-7xl sm:px-6 lg:px-8 ">
         <div class="pb-8 xl:grid xl:grid-cols-4 xl:gap-8">
           <div class="grid grid-cols-2 gap-8 xl:col-span-4">
             <div class="md:grid md:grid-cols-2 md:gap-8">
               <div>
-                <h3 class="text-sm font-semibold tracking-wider text-gray-400 uppercase">
-                  Solutions
+                <h3 class="pb-2 text-sm font-semibold text-gray-300 uppercase">
+                  SUPPORT
                 </h3>
                 <ul role="list" class="mt-4 space-y-4">
                   <li>
-                    <a href="#" class="text-base text-gray-300 hover:text-white">
-                      Marketing
+                    <a href="#" class="text-sm text-gray-400 hover:text-white">
+                      USER MANUAL
                     </a>
                   </li>
 
                   <li>
-                    <a href="#" class="text-base text-gray-300 hover:text-white">
-                      Analytics
+                    <a href="#" class="text-sm text-gray-400 hover:text-white">
+                      DISPLAY SW900 USERS MANUAL
                     </a>
                   </li>
 
                   <li>
-                    <a href="#" class="text-base text-gray-300 hover:text-white">
-                      Commerce
+                    <a href="#" class="text-sm text-gray-400 hover:text-white">
+                      DISPLAY 750C USERS MANUAL
                     </a>
                   </li>
 
                   <li>
-                    <a href="#" class="text-base text-gray-300 hover:text-white">
-                      Insights
+                    <a href="#" class="text-sm text-gray-400 hover:text-white">
+                      NIREEKA DISPLAY USERS MANUAL
                     </a>
                   </li>
                 </ul>
               </div>
               <div class="mt-12 md:mt-0">
-                <h3 class="text-sm font-semibold tracking-wider text-gray-400 uppercase">
-                  Support
+                <h3 class="pb-2 text-sm font-semibold text-gray-300 uppercase">
+                  CUSTOMER SERVICE
                 </h3>
                 <ul role="list" class="mt-4 space-y-4">
                   <li>
-                    <a href="#" class="text-base text-gray-300 hover:text-white">
-                      Pricing
+                    <a href="#" class="text-sm text-gray-400 hover:text-white">
+                      NIREEKA GAME
                     </a>
                   </li>
 
                   <li>
-                    <a href="#" class="text-base text-gray-300 hover:text-white">
-                      Documentation
+                    <a href="#" class="text-sm text-gray-400 hover:text-white">
+                      FAQ
                     </a>
                   </li>
 
                   <li>
-                    <a href="#" class="text-base text-gray-300 hover:text-white">
-                      Guides
+                    <a href="#" class="text-sm text-gray-400 hover:text-white">
+                      CONTACT US
                     </a>
                   </li>
 
                   <li>
-                    <a href="#" class="text-base text-gray-300 hover:text-white">
-                      API Status
-                    </a>
+                    <a href="#" class="text-sm text-gray-400 hover:text-white">
+                      WARRANTY </a>
                   </li>
                 </ul>
               </div>
             </div>
             <div class="md:grid md:grid-cols-2 md:gap-8">
               <div>
-                <h3 class="text-sm font-semibold tracking-wider text-gray-400 uppercase">
-                  Company
+                <h3 class="pb-2 text-sm font-semibold text-gray-300 uppercase">
+                  ABOUT US
                 </h3>
                 <ul role="list" class="mt-4 space-y-4">
                   <li>
-                    <a href="#" class="text-base text-gray-300 hover:text-white">
-                      About
+                    <a href="#" class="text-sm text-gray-400 hover:text-white">
+                      PRIVACY POLICY
                     </a>
                   </li>
 
                   <li>
-                    <a href="#" class="text-base text-gray-300 hover:text-white">
-                      Blog
+                    <a href="#" class="text-sm text-gray-400 hover:text-white">
+                      TERMS&CONDITIONS
                     </a>
                   </li>
 
                   <li>
-                    <a href="#" class="text-base text-gray-300 hover:text-white">
-                      Jobs
-                    </a>
-                  </li>
-
-                  <li>
-                    <a href="#" class="text-base text-gray-300 hover:text-white">
-                      Press
-                    </a>
-                  </li>
-
-                  <li>
-                    <a href="#" class="text-base text-gray-300 hover:text-white">
-                      Partners
+                    <a href="#" class="text-sm text-gray-400 hover:text-white">
+                      RETURN&REFUND POLICY
                     </a>
                   </li>
                 </ul>
               </div>
-              <div class=" xl:mt-0">
-                <h3 class="pb-5 text-sm font-semibold tracking-wider text-gray-400 uppercase">
+              <div class="mt-40 md:mt-0 lg:mt-0 xl:mt-0 lp:mt-0">
+                <h3 class="pb-5 text-sm font-semibold text-gray-300 uppercase ">
                   social </h3>
                 <div
-                  class="absolute flex items-center justify-center px-2 py-3 space-x-3 border border-gray-600 rounded-xl md:order-2">
+                  class="absolute flex items-center justify-center px-6 py-3 space-x-3 border border-gray-600 rounded-xl md:order-2">
                   <a href="https://www.facebook.com/nireeka/" class="text-gray-400 hover:text-red-500" target="_blank">
                     <span class="sr-only">Facebook</span>
                     <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -525,9 +736,24 @@
                   </a>
 
                   <a href="https://youtube.com/nireeka" class="text-gray-400 hover:text-red-500" target="_blank">
-                    <span class="w-6 h-6">Youtube</span>
+                    <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 30 30"
+                      fill="currentColor">
+                      <path
+                        d="M 15 4 C 10.814 4 5.3808594 5.0488281 5.3808594 5.0488281 L 5.3671875 5.0644531 C 3.4606632 5.3693645 2 7.0076245 2 9 L 2 15 L 2 15.001953 L 2 21 L 2 21.001953 A 4 4 0 0 0 5.3769531 24.945312 L 5.3808594 24.951172 C 5.3808594 24.951172 10.814 26.001953 15 26.001953 C 19.186 26.001953 24.619141 24.951172 24.619141 24.951172 L 24.621094 24.949219 A 4 4 0 0 0 28 21.001953 L 28 21 L 28 15.001953 L 28 15 L 28 9 A 4 4 0 0 0 24.623047 5.0546875 L 24.619141 5.0488281 C 24.619141 5.0488281 19.186 4 15 4 z M 12 10.398438 L 20 15 L 12 19.601562 L 12 10.398438 z">
+                      </path>
+                    </svg>
 
                   </a>
+                  <a href="https://tumbler.com/Nireeka1" class="text-gray-400 hover:text-red-500" target="_blank">
+                    <span class="sr-only">tumbler</span>
+                    <svg fill="currentColor" class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50"
+                      width="50px" height="50px">
+                      <path
+                        d="M41,4H9C6.24,4,4,6.24,4,9v32c0,2.76,2.24,5,5,5h32c2.76,0,5-2.24,5-5V9C46,6.24,43.76,4,41,4z M30.65,18 c0.19,0,0.35,0.17,0.35,0.37v4.26c0,0.2-0.16,0.37-0.35,0.37H26c0,0,0,7.98,0,8.19c0,0.2,0.18,2.69,2.78,2.69 c2.15,0,3.67-1.14,3.69-1.15c0.05-0.04,0.12-0.06,0.18-0.06s0.12,0.02,0.17,0.05C32.93,32.78,33,32.9,33,33.03v3.7 c0,0.1-0.04,0.2-0.12,0.26C32.79,37.08,30.32,39,25.25,39C19.17,39,19,32.1,19,31.31V23h-2.65C16.16,23,16,22.85,16,22.65v-3.57 c0-0.15,0.09-0.28,0.22-0.33c0.06-0.02,5.5-2.19,5.5-7.41c0-0.2,0.15-0.36,0.34-0.36L25.65,11c0.19,0,0.35,0.16,0.35,0.35V18H30.65z" />
+                    </svg>
+                  </a>
+
+
 
                 </div>
 
@@ -536,14 +762,16 @@
           </div>
         </div>
       </div>
-      <div class="flex justify-between w-5/6 px-4 py-6 mx-auto text-white sm:w-full max-w-7xl sm:px-6 lg:py-8 lg:px-8">
+    </div>
+    <div class="flex w-9/12 mx-auto lg:px-10">
+      <div class="flex justify-between px-4 py-6 mx-auto text-white sm:w-full max-w-7xl sm:px-6 lg:py-8 lg:px-8">
 
         <div class="w-1/2">
-          <img src="/dist/images/logo_nireeka_white.svg" alt="logo" class="w-3/12 imgMin-w">
+          <img src="/dist/images/logo_nireeka_white.svg" alt="logo" class="w-6/12 Min-w17">
         </div>
         <div class="w-1/2">
 
-          <p class="text-base font-thin text-center text-gray-400 md:order-1">
+          <p class="flex justify-end text-base font-thin text-center text-gray-300 md:order-1">
             ©
             <!-- {{now()->format('Y')}}  -->
             Nireeka Technologies Inc. All rights reserved.
@@ -573,6 +801,24 @@
     showPanel(2);
   </script>
   <!-- tab -->
+  <!-- swiper -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      cssMode: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      pagination: {
+        el: ".swiper-pagination",
+      }, autoplay: {
+        delay: 5000,
+      },
+      mousewheel: true,
+      keyboard: true,
+    });
+  </script>
 </body>
 
 </html>

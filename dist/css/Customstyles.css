@@ -145,8 +145,8 @@ style show hidden profile .styleProfile {
 .imgMin-w {
   min-width: 200px;
 }
-.Min-w17 {
-  min-width: 17vw;
+.Min-w10 {
+  min-width: 10rem;
 }
 .Min-w {
   min-width: 22vw;
@@ -162,4 +162,48 @@ style show hidden profile .styleProfile {
 }
 .min-w-nireeka {
   min-width: 15vw;
+}
+.max-w-nireeka {
+  max-width: 15vw;
+}
+.mystyle {
+  border-bottom: 1px solid red;
+}
+@media screen and (max-width: 1024px) {
+  .mystyle {
+    border: none;
+  }
+}
+.maxvw95 {
+  max-width: 95vw;
+}
+/* --------------------------------- coupon --------------------------------- */
+.colorCopon {
+  background-color: #ff9900;
+}
+.Triangular::after {
+  content: "";
+  width: 15px;
+  height: 15px;
+  background: white;
+  position: absolute;
+  top: -8px;
+  left: 8%;
+  -webkit-transform: translateX(-50%) rotate(45deg);
+  transform: translateX(-50%) rotate(45deg);
+  border-top: 2px solid #e7e9ec;
+  border-left: 2px solid #e7e9ec;
+}
+.imgborder {
+  border: 10px solid transparent;
+  padding: 4px 11px;
+  border-image: url(/dist/images/borderd.png) 10 round;
+}
+.imgborderR {
+  border: 10px solid transparent;
+  padding: 18px 0px;
+  border-image: url(/dist/images/border.png) 10 round;
+}
+.shadowCoupon {
+  box-shadow: 1px -1px 2px 0px #cccccc;
 }

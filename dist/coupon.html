@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/fonts.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/Customstyles.css" />
+  <title>nireeka</title>
+  <meta name="description" content="nireeka" />
+  <meta property="og:title" content="nireeka" />
+  <meta property="og:description" content="nireeka" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+    integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body style="padding: 25px;">
+  <style>
+    #journal-scroll::-webkit-scrollbar {
+      width: 4px;
+      cursor: pointer;
+      /*background-color: rgba(229, 231, 235, var(--bg-opacity));*/
+
+    }
+
+    #journal-scroll::-webkit-scrollbar-track {
+      background-color: rgba(229, 231, 235, var(--bg-opacity));
+      cursor: pointer;
+      /*background: red;*/
+    }
+
+    #journal-scroll::-webkit-scrollbar-thumb {
+      cursor: pointer;
+      background-color: #a0aec0;
+      /*outline: 1px solid slategrey;*/
+    }
+  </style>
+
+  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+
+
+<div class="flex justify-center">
+  <div class="relative w-48 h-10 colorCopon py-1.5 ">
+    <h6 class="px-3 mx-auto text-gray-100 normal-case "> USD <span class="text-white font-radBold "> $100 </span> off on
+      USD <span class="text-white font-radBold"> $3000</span></h6>
+    <img src="/dist/images/borderd.png" alt="" class="absolute top-0 h-10 -left-2">
+    <img src="/dist/images/border.png" alt="" class="absolute top-0 h-10 -right-2">
+    <div id="couponsDiv"
+      class="absolute z-10 hidden h-auto bg-white border-2 border-gray-200 rounded-sm top-12 w-80 Triangular shadowCoupon">
+      <p class="p-3 text-xs text-gray-500 normal-case">store coupon</p>
+      <!-- seperation coupon -->
+      <div class="flex-col h-auto pb-1 ">
+        <div class="border-b-2 border-dashed">
+          <div class="h-200  py-1.5 px-5 flex justify-evenly">
+            <div class="relative h-20 px-2 w-52 colorCopon rounded-r-md">
+              <div class="absolute top-0 left-0 flex-col text-white imgborder ">
+                <h5 class="text-lg normal-case font-radBold">USD $100</h5>
+                <h5 class="normal-case text-md">Order over USD $3,000</h5>
+              </div>
+            </div>
+            <!-- right -->
+            <div>
+              <div class="relative w-20 h-20 px-2 colorCopon rounded-l-md">
+                <div class="absolute top-0 flex-col text-white -right-2 imgborderR ">
+                  <button class="flex justify-center px-5 text-gray-800 normal-case bg-white text-md rounded-2xl hover:text-customColorNIR hover:border-customColorNIR ">Get</button>
+              
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- seperation coupon -->
+      <div class="flex-col h-auto pb-1 ">
+        <div class="border-b-2 border-dashed">
+          <div class="h-200  py-1.5 px-5 flex justify-evenly">
+            <div class="relative h-20 px-2 w-52 colorCopon rounded-r-md">
+              <div class="absolute top-0 left-0 flex-col text-white imgborder ">
+                <h5 class="text-lg normal-case font-radBold">USD $300</h5>
+                <h5 class="normal-case text-md">Order over USD $3,500</h5>
+              </div>
+            </div>
+            <!-- right -->
+            <div>
+              <div class="relative w-20 h-20 px-2 colorCopon rounded-l-md">
+                <div class="absolute top-0 flex-col text-white -right-2 imgborderR ">
+                  <button class="flex justify-center px-5 text-gray-800 normal-case bg-white text-md rounded-2xl hover:text-customColorNIR hover:border-customColorNIR ">Get</button>
+              
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- seperation coupon -->
+      <div class="flex-col h-auto pb-1 ">
+        <!-- if finish delete border -->
+        <!-- <div class="border-b-2 border-dashed"> -->
+        <div>
+          <div class="h-200  py-1.5 px-5 flex justify-evenly">
+            <div class="relative h-20 px-2 w-52 colorCopon rounded-r-md">
+              <div class="absolute top-0 left-0 flex-col text-white imgborder ">
+                <h5 class="text-lg normal-case font-radBold">USD $300</h5>
+                <h5 class="normal-case text-md">Order over USD $4,000 +</h5>
+              </div>
+            </div>
+            <!-- right -->
+            <div>
+              <div class="relative w-20 h-20 px-2 colorCopon rounded-l-md">
+                <div class="absolute top-0 flex-col text-white -right-2 imgborderR ">
+                  <button class="flex justify-center px-5 text-gray-800 normal-case bg-white text-md rounded-2xl hover:text-customColorNIR hover:border-customColorNIR ">Get</button>
+              
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button class="mx-5 my-auto text-sm text-blue-400 normal-case" id="Coupons">Get coupons </button>
+
+</div>
+<script>
+  // COUPONS
+  const showCoupons = document.querySelector("#Coupons");
+  showCoupons.addEventListener("click", function () {
+    // document.getElementById("profileDiv").togg.add("styleCoupons");
+    document.querySelector("#couponsDiv").classList.toggle("hidden");
+  });
+// COUPONS
+</script>
+</body>
+
+</html>
